@@ -1,0 +1,17 @@
+%h1 Pages#home
+%p Find me in app/views/pages/home.html.erb
+%section
+  %h2 Posts
+  = @posts.inspect
+  - @posts.each do |post|
+    %div
+      %h3
+        = post.title
+      %p
+        = post.body
+%section
+  %h2 Skills
+  = @skills.inspect
+  - @skills.each do |skill|
+    %p
+      = skill.title
